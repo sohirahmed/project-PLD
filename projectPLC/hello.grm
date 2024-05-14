@@ -1,0 +1,99 @@
+"Name" = 'GoldParser javaScript like syntax'
+       
+"Start Symbol" = <program>
+               
+!----character set -----
+{ID Head} = {Letter} + [_]
+{ID Tail} = {Alphanumeric} + [_]
+{String Chars} = {Printable} + {HT} -["\]
+                    
+!----Terminal-----
+Id = {ID Head} {ID Tail}*
+   
+Digit = '"' ( {String Chars} | '\' {Printable})* '"'
+Integer = {digit}+      
+   
+!----Rules-----
+<program> ::= <stmt_list> 
+           
+<stmt_list> ::= <concept>
+             |<concept><stmt_list>
+             
+
+<concept>::= <variable_declar> | <assign>
+          |<if_stmt> | <switch_stmt>
+          |<for_stmt> |<while_loop> | <dowhile_loop>
+          
+<variable_declar> ::= <type> Id '=' <expr> 
+                  
+ <type> ::= 'var' | 'let'
+          
+<assign> ::= Id '=' <expr>
+          
+
+!----if stmt-----
+
+<if_stmt> ::= if '('<expr>')' '{' <stmt_list> '}'
+           |if '('<expr>')' '{' <stmt_list> '}' else '{' <stmt_list> '}'
+           
+
+!----switch stmt----
+<switch_stmt> ::= switch '('<expr> ')' '{' <caselist> <default> '}'
+               
+               
+<caselist> ::= 
+            | <caselist> 'case' <expr> ':' <stmt_list> 'break'
+            | 'case' <expr> ':' <stmt_list> 'break'
+            
+<default> ::= 'default' ':' <stmt_list> 
+           
+!----for stmt-----
+<for_stmt> ::= For '('<init> ';' <expr> ';' <step> ')' '{' <stmt_list> '}'
+            
+<init> ::= <type> id '=' <expr>
+        
+<step> ::= '--' Id
+        |Id'--'
+        |'++'Id
+        |Id'++'
+        
+!----while loop----
+<while_loop> ::= while '(' <expr> ')' '{' <stmt_list> '}'
+
+!----diwhile loop ------
+<dowhile_loop> ::= do '{' <stmt_list> '}' while '(' <expr> ')' 
+      
+<expr> ::= <expr>'>'<add_expr>
+        |<expr>'<'<add_expr>
+        |<expr>'<='<add_expr>
+        |<expr>'>='<add_expr>
+        |<expr>'=='<add_expr>
+        |<expr>'<>'<add_expr>
+        |<add_expr>
+        
+<add_expr> ::= <add_expr> '+' <mul_expr>
+            |<add_expr> '-' <mul_expr>
+            |<mul_expr>
+        
+<mul_expr> ::= <mul_expr>'*'<negative_expr>
+        |<mul_expr>'/'<negative_expr>
+        |<mul_expr>'%'<negative_expr>
+        |<negative_expr>
+        
+<negative_expr> ::= '-'<value>
+          |<value>
+          
+!---add mor values to the rule below
+
+<Value>       ::= Id
+               |Integer
+               |StringLiteral
+               |  '(' <expr> ')'
+          
+
+        
+
+      
+
+        
+

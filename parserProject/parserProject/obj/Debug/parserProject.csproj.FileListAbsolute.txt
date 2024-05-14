@@ -1,0 +1,13 @@
+C:\Users\haneen\source\repos\parserProject\parserProject\bin\Debug\parserProject.exe.config
+C:\Users\haneen\source\repos\parserProject\parserProject\bin\Debug\parserProject.exe
+C:\Users\haneen\source\repos\parserProject\parserProject\bin\Debug\parserProject.pdb
+C:\Users\haneen\source\repos\parserProject\parserProject\bin\Debug\CalithaLib.dll
+C:\Users\haneen\source\repos\parserProject\parserProject\bin\Debug\GoldParserEngine.dll
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.csproj.AssemblyReference.cache
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.Form1.resources
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.Properties.Resources.resources
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.csproj.GenerateResource.cache
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.csproj.CoreCompileInputs.cache
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.csproj.CopyComplete
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.exe
+C:\Users\haneen\source\repos\parserProject\parserProject\obj\Debug\parserProject.pdb
